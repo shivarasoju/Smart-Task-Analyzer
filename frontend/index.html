@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Analyzer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Smart Task Analyzer</h1>
+
+    <div class="container">
+      <div class="left-panel">
+        <textarea id="taskInput" placeholder="Enter JSON tasks here"></textarea>
+
+        <div class="controls">
+          <button id="analyzeBtn">Analyze</button>
+          <button id="suggestBtn">Suggest</button>
+
+          <select id="sortDropdown">
+            <option value="fastest">Fastest Wins</option>
+            <option value="deadline">Deadline Driven</option>
+            <option value="importance">Most Important First</option>
+          </select>
+        </div>
+      </div>
+      <div class="right-panel">
+        <h3>Results:</h3>
+        <pre id="output"></pre>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

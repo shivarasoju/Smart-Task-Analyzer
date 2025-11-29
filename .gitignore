@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# VS Code
+.vscode/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/         
+
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+*.cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / Coverage
+htmlcov/
+.coverage
+.coverage.*
+pytest_cache/
+nosetests.xml
+coverage.xml
+
+# MyPy
+.mypy_cache/

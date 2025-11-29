@@ -1,0 +1,145 @@
+//this is for analyze endopoint
+
+[
+  {
+    "title": "Complete Project Report",
+    "due_date": "2025-03-02",
+    "importance": 9,
+    "estimated_hours": 4,
+    "dependencies": []
+  },
+  {
+    "title": "Buy Groceries",
+    "due_date": "2025-02-28",
+    "importance": 3,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Prepare for Interview",
+    "due_date": "2025-03-01",
+    "importance": 10,
+    "estimated_hours": 3,
+    "dependencies": ["Complete Project Report"]
+  },
+  {
+    "title": "Gym Workout",
+    "due_date": "2025-02-27",
+    "importance": 4,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Pay Electricity Bill",
+    "due_date": "2025-02-26",
+    "importance": 7,
+    "estimated_hours": 0.5,
+    "dependencies": []
+  }
+]
+
+
+// this is for suggest endpoint test data
+[
+  {
+    "title": "Finish Resume Update",
+    "due_date": "2025-11-29",
+    "importance": 9,
+    "estimated_hours": 2,
+    "dependencies": []
+  },
+  {
+    "title": "College Assignment Submission",
+    "due_date": "2025-11-29",
+    "importance": 7,
+    "estimated_hours": 3,
+    "dependencies": []
+  },
+  {
+    "title": "Prepare for Coding Interview",
+    "due_date": "2025-11-29",
+    "importance": 10,
+    "estimated_hours": 4,
+    "dependencies": ["Finish Resume Update"]
+  },
+  {
+    "title": "Pay Rent",
+    "due_date": "2025-11-29",
+    "importance": 8,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Workout Session",
+    "due_date": "2025-11-29",
+    "importance": 6,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Clean Room",
+    "due_date": "2025-11-29",
+    "importance": 5,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Prepare Breakfast",
+    "due_date": "2025-11-29",
+    "importance": 4,
+    "estimated_hours": 0.5,
+    "dependencies": []
+  },
+
+  {
+    "title": "Start Portfolio Redesign",
+    "due_date": "2025-12-01",
+    "importance": 8,
+    "estimated_hours": 5,
+    "dependencies": []
+  },
+  {
+    "title": "Doctor Appointment",
+    "due_date": "2025-12-02",
+    "importance": 9,
+    "estimated_hours": 1,
+    "dependencies": []
+  },
+  {
+    "title": "Shopping for Friend’s Birthday",
+    "due_date": "2025-12-05",
+    "importance": 4,
+    "estimated_hours": 2,
+    "dependencies": []
+  },
+  {
+    "title": "Submit Project Report",
+    "due_date": "2025-12-03",
+    "importance": 10,
+    "estimated_hours": 6,
+    "dependencies": []
+  },
+  {
+    "title": "Start Learning Docker",
+    "due_date": "2025-12-04",
+    "importance": 6,
+    "estimated_hours": 3,
+    "dependencies": []
+  },
+  {
+    "title": "Plan New Year Trip",
+    "due_date": "2025-12-15",
+    "importance": 5,
+    "estimated_hours": 2,
+    "dependencies": []
+  },
+  {
+    "title": "Bank Account Update",
+    "due_date": "2025-12-06",
+    "importance": 7,
+    "estimated_hours": 1,
+    "dependencies": []
+  }
+]
+
+
