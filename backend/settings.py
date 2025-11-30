@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1almycf__4mqwswf#!c#^9j+(ns*w*wvy1bm5h*c)6v*29wwb*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://smart-task-analyzer-tivl.onrender.com","127.0.0.1","localhost"]
+ALLOWED_HOSTS = ["smart-task-analyzer-tivl.onrender.com","127.0.0.1","localhost"]
 
 
 # Application definition
