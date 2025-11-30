@@ -292,6 +292,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # 7B. Example Input JSON for /suggest endpoint or for Suggest
 
+**NOTE** : For suggest endpoint change and keep the present and future dates as it suggests the top 3 tasks for today only. In case of past dates it will show an error message
+
 ```json
 
 [
