@@ -2,6 +2,8 @@ const input = document.getElementById("taskInput");
 const output = document.getElementById("output");
 const dropdown = document.getElementById("sortDropdown");
 
+const BASE_URL = window.BACKEND_URL;
+
 let rawTasks = [];
 let analyzedTasks = [];
 
@@ -44,14 +46,18 @@ input.addEventListener("change", () => {
 document.getElementById("analyzeBtn").onclick = async function () {
   try {
     rawTasks = JSON.parse(input.value);
+    const url = `${BASE_URL}/api/tasks/analyze/`;
+    console.log(url, "this is url");
 
-    let res = await fetch("http://127.0.0.1:8000/api/tasks/analyze/", {
+    // const url = "http://127.0.0.1:8000/api/tasks/analyze/";
+
+    let res = await fetch(url, {
       method: "POST",
       body: input.value,
     });
 
     analyzedTasks = await res.json();
-    // console.log(analyzedTasks, "this is data");
+    console.log(analyzedTasks, "this is data");
 
     if (res.status !== 200) {
       handleFailedApiCase();
@@ -68,8 +74,10 @@ document.getElementById("analyzeBtn").onclick = async function () {
 document.getElementById("suggestBtn").onclick = async function () {
   try {
     rawTasks = JSON.parse(input.value);
-
-    let res = await fetch("http://127.0.0.1:8000/api/tasks/suggest/", {
+    const url = BASE_URL
+      ? `${BASE_URL}/suggest/`
+      : "http://127.0.0.1:8000/api/tasks/suggest/";
+    let res = await fetch(url, {
       method: "POST",
       body: input.value,
     });
