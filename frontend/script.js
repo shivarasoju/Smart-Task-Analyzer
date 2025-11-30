@@ -7,7 +7,7 @@ const BASE_URL = window.BACKEND_URL;
 let rawTasks = [];
 let analyzedTasks = [];
 
-const handleFailedApiCase = () => {
+const handleFailedApiCase = (analyzedTasks) => {
   output.textContent = `Cannot suggest tasks as ${analyzedTasks.error}`;
   output.style.backgroundColor = "red";
   output.style.color = "white";
@@ -46,10 +46,10 @@ input.addEventListener("change", () => {
 document.getElementById("analyzeBtn").onclick = async function () {
   try {
     rawTasks = JSON.parse(input.value);
-    const url = `${BASE_URL}/api/tasks/analyze/`;
-    console.log(url, "this is url");
-
-    // const url = "http://127.0.0.1:8000/api/tasks/analyze/";
+    const url = BASE_URL
+      ? `${BASE_URL}/api/tasks/analyze/`
+      : "http://127.0.0.1:8000/api/tasks/analyze/";
+    // console.log(url, "this is url");
 
     let res = await fetch(url, {
       method: "POST",
@@ -57,10 +57,10 @@ document.getElementById("analyzeBtn").onclick = async function () {
     });
 
     analyzedTasks = await res.json();
-    console.log(analyzedTasks, "this is data");
+    // console.log(analyzedTasks, "this is data");
 
     if (res.status !== 200) {
-      handleFailedApiCase();
+      handleFailedApiCase(analyzedTasks);
       return;
     }
 
@@ -74,9 +74,13 @@ document.getElementById("analyzeBtn").onclick = async function () {
 document.getElementById("suggestBtn").onclick = async function () {
   try {
     rawTasks = JSON.parse(input.value);
+
     const url = BASE_URL
-      ? `${BASE_URL}/suggest/`
+      ? `${BASE_URL}/api/tasks/suggest/`
       : "http://127.0.0.1:8000/api/tasks/suggest/";
+
+    // console.log(url, "this is suggest url");
+
     let res = await fetch(url, {
       method: "POST",
       body: input.value,
@@ -86,7 +90,7 @@ document.getElementById("suggestBtn").onclick = async function () {
     // console.log(data, "this is suggest data");
 
     if (res.status !== 200) {
-      handleFailedApiCase();
+      handleFailedApiCase(data);
       return;
     }
     renderTaskCards(data.tasks);

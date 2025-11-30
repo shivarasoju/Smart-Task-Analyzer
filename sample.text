@@ -43,49 +43,49 @@
 [
   {
     "title": "Finish Resume Update",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 9,
     "estimated_hours": 2,
     "dependencies": []
   },
   {
     "title": "College Assignment Submission",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 7,
     "estimated_hours": 3,
     "dependencies": []
   },
   {
     "title": "Prepare for Coding Interview",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 10,
     "estimated_hours": 4,
     "dependencies": ["Finish Resume Update"]
   },
   {
     "title": "Pay Rent",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 8,
     "estimated_hours": 1,
     "dependencies": []
   },
   {
     "title": "Workout Session",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 6,
     "estimated_hours": 1,
     "dependencies": []
   },
   {
     "title": "Clean Room",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 5,
     "estimated_hours": 1,
     "dependencies": []
   },
   {
     "title": "Prepare Breakfast",
-    "due_date": "2025-11-29",
+    "due_date": "2025-11-30",
     "importance": 4,
     "estimated_hours": 0.5,
     "dependencies": []
